@@ -4,6 +4,7 @@ NOTE:- If Anything Is Not Working Make Sure there is Python 3.7.7 version instal
 ```
 ### All the required packages are given in requirements.txt file to install all do
 ```
+cd advisornetwork
 pip install -r requirements.txt
 ```
 
