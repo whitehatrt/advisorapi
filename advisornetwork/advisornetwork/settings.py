@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-@1lq3_&2xht12bt66z$tx+e7+n4xo&_1x69d@2ue_l=3d)q%gp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['advnetwork.herokuapp.com']
 
 
 # Application definition
@@ -54,7 +54,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOW_CREDENTIALS = True 
-# CORS_ORIGIN_WHITELIST = ['http://localhost:3000']
+CORS_ORIGIN_WHITELIST = ['https://advnetwork.herokuapp.com']
 
 ROOT_URLCONF = 'advisornetwork.urls'
 AUTH_USER_MODEL = 'api.User'
@@ -110,6 +110,9 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
      'api.verify.JWTAuthentication',
     ),    
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    )
    
 }
 
